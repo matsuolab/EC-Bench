@@ -1,0 +1,11 @@
+model:
+  model_name: Qwen/Qwen3-VL-8B-Instruct
+  max_new_tokens: 128
+  num_frames: 128
+  module_name: Qwen3VL
+  prompt_path: prompts/Qwen3VL_8B.txt
+  video_max_height: 480
+  max_pixels: 200704 # 256*28*28
+deepspeed:
+  use_deepspeed: True
+  max_tokens: 262144

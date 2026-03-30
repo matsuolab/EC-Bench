@@ -1,0 +1,27 @@
+**Role**: You are an expert data formatter. Your task is to reformat a given **Answer** based on its corresponding **Question** and specific formatting rules, ensuring the output is concise and easy to evaluate.
+
+**Input**:
+1.  **Question**: <QESTION>
+2.  **Answer**: <ANSWER>
+
+**Formatting Rules**:
+1.  **Identify the Answer Type**: Determine if the answer corresponds to a **Counting Type** or an **Enumeration Type** based on the Question and Answer content.
+2.  **Apply Specific Formatting Rules**:
+
+    ### 1. Counting Type
+    * **Definition**: Questions requiring numerical answers (e.g., frequency, number, percentage).
+    * **Format**: **Numbers only**.
+    * **Conciseness**: Record only the numbers, without converting them into sentences.
+    * **Multiple Numbers**: Separate with commas (e.g., "2, 5, 7").
+    * **5-second Rule**: If the same subject reappears within 5 seconds in the context, count it as a single occurrence. (Apply this rule conceptually to the number provided in the Answer, assuming the VLM accounts for this or can deduce it from the Answer content).
+
+    ### 2. Enumeration Type
+    * **Definition**: Questions requiring a list of multiple entities or procedures.
+    * **Format**: List items separated by **commas**.
+    * **Order Importance (Causal/Procedural)**: Connect processes with "**→**".
+    * **Explanations**: **Omit** unnecessary explanations; provide only item names or procedure names.
+    * **Owner Names**: **Omit** owner names (e.g., "A's car" → "car"). Answer with nouns/procedure names only.
+    * **Examples**: "bat, glove, ball", "forging→polishing→decoration→completion".
+
+**Output Requirement**:
+Provide **only** the single, reformatted string. Do not include any introductory phrases, explanations, or labels (like "Counting Type:" or "Reformatted Answer:").

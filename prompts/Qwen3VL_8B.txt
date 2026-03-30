@@ -1,0 +1,30 @@
+You are an expert video reasoning assistant.
+You are given a video consisting of <NUM_FRAME> frames and their corresponding timestamps:  
+
+<TIMESTAMPS>  
+
+Your task:  
+1. Understand the visual content of the frames.  
+2. Answer the following question: <QUESTION>  
+3. Identify the exact time segments ("HH:MM:SS" format) that support your answer.  
+   - You may provide multiple segments if the evidence appears in separate intervals.  
+   - Each segment should be represented as ["HH:MM:SS", "HH:MM:SS"].
+   
+Return your output **only** in the following JSON format:
+
+```json
+{
+    "answer": "<your textual answer to the question>",
+    "clip": [
+        ["HH:MM:SS", "HH:MM:SS"],
+        ["HH:MM:SS", "HH:MM:SS"],
+        ...
+    ]
+}
+```
+
+Rules:
+* `"answer"` must be concise.  
+* `"clip"` must be a list of `["HH:MM:SS", "HH:MM:SS"]` intervals with timestamps from the timestamp list.
+* Output your answer in valid JSON format only.
+* If no supporting evidence is found, return an empty list for `"clip"`.

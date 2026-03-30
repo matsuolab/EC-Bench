@@ -1,0 +1,23 @@
+eval_tsubame.sh
+_eval_tsubame.sh
+
+.env
+
+data/video_list/*
+
+result
+
+__pycache__
+
+# Output directories (generated data)
+**/output/
+
+# Credentials
+cookies.txt
+new-cookies.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+docs/
