@@ -10,7 +10,7 @@
 
 <div align='center'>
 
-[\[arXiv Paper (coming soon)\]]() &nbsp;&nbsp;
+[\[arXiv Paper\]](https://arxiv.org/abs/2603.29943) &nbsp;&nbsp;
 [\[Dataset\]](https://huggingface.co/datasets/vai-org/EC-Bench)
 
 </div>
@@ -297,11 +297,13 @@ Performance of open-source and proprietary MLLMs on EC-Bench. Accuracy (%) is re
 If you find our work helpful for your research, please consider citing our work.
 
 ```bibtex
-@article{ecbench2026,
-      title={EC-Bench: Enumeration and Counting Benchmark for Ultra-Long Videos},
-      author={},
-      journal={arXiv preprint arXiv:xxxx.xxxxx},
-      year={2026}
+@misc{tsuchiya2026ecbench,
+  title        = {EC-Bench: Enumeration and Counting Benchmark for Ultra-Long Videos},
+  author       = {Fumihiko Tsuchiya and Taiki Miyanishi and Mahiro Ukai and Nakamasa Inoue and Shuhei Kurita and Yusuke Iwasawa and Yutaka Matsuo},
+  year         = {2026},
+  eprint       = {2603.29943},
+  archivePrefix= {arXiv},
+  primaryClass = {cs.CV}
 }
 ```
 
